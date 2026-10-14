@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Jdownloader2
+Exec=sh -c "exec ~/jd2/JDownloader2"
+Icon=jdownloader2

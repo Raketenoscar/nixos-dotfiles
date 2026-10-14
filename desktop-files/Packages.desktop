@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Packages
+Exec=librewolf https://search.nixos.org/packages
+Icon=nix-snowflake-white
