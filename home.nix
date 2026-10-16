@@ -52,8 +52,8 @@
     [General]
     ColorScheme=BreezeDark
     Name=BreezeDark
-    TerminalApplication=alacritty
-    TerminalService=Alacritty.desktop
+    TerminalApplication=foot
+    TerminalService=foot.desktop
     font=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
     menuFont=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
     toolBarFont=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
@@ -112,12 +112,11 @@
                         nrs = "sudo nixos-rebuild switch --flake /home/oscar/nixos";
 			                  update = "nix flake update --flake /home/oscar/nixos; sudo nixos-rebuild switch --flake /home/oscar/nixos";
                         user-config = "nvim /home/oscar/nixos/user.nix";
-                        internet = "impala";
                         conf = "cd /home/oscar/nixos/config/";
-                        neofetch = "bash /home/oscar/nixos/config/neofetch/neofetch.sh";
                         dot = "cd /home/oscar/nixos";
+                        hypr = "nvim /home/oscar/nixos/config/hypr/hyprland.lua";
                         freespace = "sudo nix-collect-garbage -d; sudo nixos-rebuild switch --flake /home/oscar/nixos";
-                        rocketserver = "ssh oscar@192.168.88.50";
+                        rocketserver = "ssh oscar@192.168.88.32";
                         nixos-commit = ''cp -rf /home/oscar/nixos/* /home/oscar/nixos-dotfiles; 
                         git -C /home/oscar/nixos-dotfiles add -A; 
                         git -C /home/oscar/nixos-dotfiles commit -m "Update"; 
@@ -180,8 +179,6 @@
 # Desktop Files
   home.file.".local/share/applications".source = ./desktop-files;
 
-# Icons (installed into the hicolor icon theme so .desktop files can
-# reference icons by name regardless of the user's home dir)
+# Icons 
   home.file.".icons/hicolor/scalable/apps".source = ./desktop-files/icons;
-
 }

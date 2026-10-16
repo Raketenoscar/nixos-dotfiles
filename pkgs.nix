@@ -4,11 +4,19 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM = true;
+  };
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+     xdg-desktop-portal-hyprland
+     xdg-desktop-portal-gtk
+    ];
+   config.common.default = "hyprland";
   };
   services.mullvad-vpn.enable = true;
   services.udisks2.enable = true;
   programs.nix-ld.enable = true;
-  programs.steam.enable = true;
   nixpkgs.config.allowUnfree = true;
   hardware.graphics = {
     enable = true;
@@ -18,12 +26,16 @@
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "nvidia";
     NVD_BACKEND = "direct";
+    LD_LIBRARY_PATH = [ "/run/opengl-driver/lib" ];
   };
   environment.systemPackages = with pkgs; [
     vim
     wget
     fastfetch
     unrar-wrapper
+    steam
+    discord
+    obs-studio
     kdePackages.dolphin
     python3
     neovim
