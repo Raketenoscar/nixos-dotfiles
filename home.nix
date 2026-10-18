@@ -47,61 +47,27 @@
     };
   };
 
-# KDE apps (gwenview, dolphin) dark theme
+# KDE apps 
   home.file.".config/kdeglobals".text = ''
     [General]
     ColorScheme=BreezeDark
-    Name=BreezeDark
-    TerminalApplication=foot
-    TerminalService=foot.desktop
+    terminalApplication=foot
     font=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
-    menuFont=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
-    toolBarFont=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
-    smallestReadableFont=JetBrainsMono Nerd Font,9,-1,5,50,0,0,0,0,0
-    fixed=JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0
 
     [Colors:Window]
     BackgroundNormal=49,54,59
-    BackgroundAlternate=35,38,41
-    BackgroundSelected=61,174,233
     ForegroundNormal=239,240,241
-    ForegroundInactive=152,154,158
-    ForegroundActive=29,153,243
-    ForegroundLink=61,174,233
-    ForegroundVisited=148,108,187
-    DecorationFocus=61,174,233
-    DecorationHover=61,174,233
 
     [Colors:View]
     BackgroundNormal=35,38,41
-    BackgroundAlternate=49,54,59
-    BackgroundSelected=61,174,233
     ForegroundNormal=239,240,241
-    ForegroundInactive=152,154,158
-    ForegroundActive=61,174,233
-    ForegroundLink=61,174,233
-    ForegroundVisited=148,108,187
-    DecorationFocus=61,174,233
-    DecorationHover=61,174,233
 
     [Colors:Selection]
     BackgroundNormal=61,174,233
-    ForegroundNormal=35,38,41
+    ForegroundNormal=35,38,41  
+    '';
 
-    [Colors:Complement]
-    BackgroundNormal=57,66,73
-    ForegroundNormal=220,227,232
-
-    [Colors:Header]
-    BackgroundNormal=61,174,233
-    ForegroundNormal=49,54,59
-
-    [Colors:Tooltip]
-    BackgroundNormal=49,54,59
-    ForegroundNormal=239,240,241
-  '';
-
-#Zsh
+# Zsh
   programs.zsh = {
     enable = true;
     shellAliases = {

@@ -141,7 +141,7 @@ PanelWindow {
         // Tray, packed left of the network icon
         Row {
             Layout.alignment: Qt.AlignVCenter
-            spacing: 6
+            spacing: 10
             Repeater {
                 model: root.trayItems
                 TrayItem {}
