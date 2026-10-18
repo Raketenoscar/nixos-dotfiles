@@ -24,7 +24,6 @@
 # Virtualization
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-  boot.kernelModules = [ "kvm-intel" "nvidia_uvm" ];
 
 # Dark Mode 
 qt = {
