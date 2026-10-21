@@ -78,6 +78,7 @@
     cava
     cmatrix
     zsh
+    kdePackages.kdenlive
     oh-my-zsh
     zsh-powerlevel10k
     libreoffice
