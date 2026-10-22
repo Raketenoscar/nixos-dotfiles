@@ -22,6 +22,10 @@
   services.mullvad-vpn.enable = true;
   services.udisks2.enable = true;
   programs.nix-ld.enable = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # PKGS
   nixpkgs.config.allowUnfree = true;
@@ -38,7 +42,6 @@
     obs-studio
     kdePackages.dolphin
     python3
-    neovim
     zoxide
     jdk
     foot

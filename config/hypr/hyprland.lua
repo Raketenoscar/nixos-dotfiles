@@ -13,11 +13,9 @@ local browser = "librewolf"
 hl.env("LD_LIBRARY_PATH", "/run/opengl-driver/lib")
 
 hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 26")
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("quickshell")
-	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 26")
-	hl.exec_cmd("steam -silent")
-	hl.exec_cmd("discord --start-minimized")
 end)
 
 hl.config({
