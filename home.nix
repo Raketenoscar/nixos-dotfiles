@@ -134,7 +134,10 @@
   xdg.configFile."rofi".source = ./config/rofi;
 
 # Foot
-  xdg.configFile."foot".source = ./config/foot;
+  xdg.configFile."foot" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/oscar/nixos/config/foot";
+    recursive = true;
+  };
 
 # Wallpapers
   home.file."walls".source = ./walls;

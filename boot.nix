@@ -9,7 +9,6 @@
     ];
     kernelModules = [ "kvm-intel" "nvidia_uvm" ];
     initrd = {
-      systemd.enable = true;
       kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_drm" ];
       };
       loader = {

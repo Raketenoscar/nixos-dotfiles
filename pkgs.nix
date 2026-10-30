@@ -16,6 +16,22 @@
     ];
    config.common.default = "hyprland";
   };
+  # SDDM
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    wayland.compositor = "kwin";
+    theme = "catppuccin-mocha-mauve";
+    settings.Theme = {
+      CursorTheme = "Bibata-Modern-Ice";
+      CursorSize = 24;
+    };
+  };
+  systemd.services.display-manager.environment = {
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";
+    XCURSOR_PATH = "/run/current-system/sw/share/icons:${pkgs.bibata-cursors}/share/icons";
+  };
 
   # Services
   services.openssh.enable = true;
@@ -31,11 +47,15 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
+  (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      accent = "mauve";
+    })
     vim
     wget
     fastfetch
+    kdePackages.kfind
     unrar-wrapper
-    chromium
     wine
     steam
     discord
@@ -64,6 +84,11 @@
     unzip
     ghostscript
     imagemagick
+    lf
+    durdraw
+    caligula
+    pastel
+    astroterm
     bat
     yt-dlp
     mpv

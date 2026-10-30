@@ -32,28 +32,28 @@ qt = {
 };
 
 # Ly
-services.displayManager.ly = {
-  enable = true;
-
-  settings = {
-    animation = "matrix";
-    animation_timeout_sec = 0;
-
-    hide_borders = true;
-    box_title = "WELCOME";
-    hide_key_hints = true;
-    hide_version_string = true;
-
-    bg = "0x00000000";
-    fg = "0x00FFFFFF";
-    border_fg = "0x00FF00FF";
-    error_fg = "0x00FF0055";
-
-    bigclock = true;
-    clock = "%A %d %B %H:%M:%S";
-
-    margin_box_h = 2;
-    margin_box_v = 1;
-  };
-};
+#services.displayManager.ly = {
+#  enable = true;
+#
+#  settings = {
+#    animation = "matrix";
+#    animation_timeout_sec = 0;
+#
+#    hide_borders = true;
+#    box_title = "WELCOME";
+#    hide_key_hints = true;
+#    hide_version_string = true;
+#
+#    bg = "0x00000000";
+#    fg = "0x00FFFFFF";
+#    border_fg = "0x00FF00FF";
+#    error_fg = "0x00FF0055";
+#
+#    bigclock = true;
+#    clock = "%A %d %B %H:%M:%S";
+#
+#    margin_box_h = 2;
+#    margin_box_v = 1;
+#  };
+#};
 }
