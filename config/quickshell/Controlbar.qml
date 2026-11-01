@@ -177,7 +177,7 @@ PanelWindow {
 
             Process {
                 id: netLaunch
-                command: ["foot", "-e", "nmtui"]
+                command: ["foot", "-e", "nmgui"]
             }
 
             Process {

@@ -6,7 +6,7 @@ hl.monitor({
 })
 
 local terminal = "foot"
-local fileManager = "dolphin"
+local fileManager = "foot -e lf"
 local menu = "rofi -show drun"
 local browser = "librewolf"
 

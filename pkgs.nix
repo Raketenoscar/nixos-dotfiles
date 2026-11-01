@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  #Flatpak
+  services.flatpak.packages = ["org.jdownloader.JDownloader"];
+
   # Hyprland
   programs.hyprland = {
     enable = true;
@@ -17,6 +20,7 @@
    config.common.default = "hyprland";
   };
   # SDDM
+  services.flatpak.enable = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -58,15 +62,14 @@
     unrar-wrapper
     wine
     steam
+    tree-sitter
     discord
     obs-studio
-    kdePackages.dolphin
     python3
     zoxide
     jdk
     foot
     btop
-    desktop-file-utils
     hyprpaper
     kdePackages.gwenview
     pfetch
@@ -90,6 +93,8 @@
     pastel
     astroterm
     bat
+    go
+    nmgui
     yt-dlp
     mpv
     tealdeer
@@ -99,7 +104,6 @@
     ripgrep
     nixpkgs-fmt
     nodejs
-    yazi
     gcc
     pamixer
     fetch
