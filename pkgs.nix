@@ -2,7 +2,11 @@
 
 {
   #Flatpak
-  services.flatpak.packages = ["org.jdownloader.JDownloader"];
+  services.flatpak.packages = [ 
+  "org.jdownloader.JDownloader"
+  "gg.norisk.NoRiskClientLauncherV3"
+  "com.github.tchx84.Flatseal"
+  ];
 
   # Hyprland
   programs.hyprland = {
@@ -58,14 +62,19 @@
     vim
     wget
     fastfetch
-    kdePackages.kfind
     unrar-wrapper
     wine
     steam
+    yarn
+    rustc
+    cargo
+    zig
     tree-sitter
+    pkg-config
     discord
     obs-studio
     python3
+    mcpelauncher-ui-qt
     zoxide
     jdk
     foot
@@ -123,7 +132,6 @@
     hyprpicker
     hyprcursor
     bibata-cursors
-    opencode
     wiremix
     wlogout
     vscodium

@@ -103,7 +103,6 @@
     initContent = ''
         source /home/oscar/nixos/config/p10k/.p10k.zsh
         eval "$(zoxide init --cmd cd zsh)"
-        pfetch
         source /etc/set-environment SDL_VIDEODRIVER=x11
       '';
 };
